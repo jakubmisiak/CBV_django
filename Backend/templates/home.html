@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Home{% endblock %}
+
+{% block content %}
+    <div>Hello
+    <a href="{% url 'logout' %}"> logout</a></div>
+    <div>
+        {% for restaurant in restaurant_list %}
+            {{restaurant.name}}
+        {%endfor%}
+    </div>
+{% endblock %}
